@@ -24,8 +24,8 @@ const Classes = () => {
                     <div className="card-body col-span-1">
                       <h2 className="card-title">{item.class}</h2>
                       <p>Instructor: <span className="font-bold">{item.instructor}</span></p>
-                      {/* <p>Available Sits: <span className="font-bold">{item.available-seats}</span></p> */}
-                      <p>Price: <span className="font-bold text-red-500">${item.price}</span></p>
+                      <p>Available Sits: <span className="font-bold text-green-600">{item.available}</span></p>
+                      <p>Price: <span className="font-bold text-blue-500">${item.price}</span></p>
                       <div className="card-actions justify-end">
                         <button className="btn btn-primary">Select</button>
                       </div>
