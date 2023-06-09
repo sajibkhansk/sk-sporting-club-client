@@ -9,7 +9,7 @@ const SignUp = () => {
 
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const onSubmit = data => {
+  const handleRegister = data => {
     if (password !== confirmPassword) {
       console.log("Passwords do not match");
       return; // Prevent form submission

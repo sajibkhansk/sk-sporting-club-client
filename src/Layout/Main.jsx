@@ -9,7 +9,7 @@ const Main = () => {
     const isSignUp = location.pathname.includes('signup');
     return (
         <div>
-            { isLogin || isSignUp || <NavBar></NavBar>}
+            { <NavBar></NavBar>}
             <Outlet></Outlet>
             {isLogin || isSignUp ||<Footer></Footer>}
         </div>
