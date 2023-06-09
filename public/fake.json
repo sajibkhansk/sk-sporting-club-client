@@ -1,92 +1,102 @@
 [
-    {
-      "image": "https://static.vecteezy.com/system/resources/thumbnails/005/129/950/small_2x/football-player-figure-line-art-human-action-on-motion-lines-controlling-the-ball-with-chest-free-vector.jpg",
-      "class name": "Football",
-      "instructor": "John Doe",
-      "instructor email": "johndoe@example.com",
-      "available seats": 15,
-      "price": 50,
-      "status": "active"
-    },
-    {
-      "image": "https://yt3.ggpht.com/proxy/kqJ01MRdcWWmDZiRoBJ5Ej2WfCoH_rRRMqQgd6bgW1Dg1sTmmh0A1oEHEyPJN3lzgxXkm3x_GFVjAIpOBjaut45Hex5eqGozrnd0Vl7G9K3VZvGtrK98s4WEyybN5f_FY9M_0HgrJX3isyvUNkpCnE80nCYfY3A_E5uvJPD2MUH7gac-2b-anmVIBHmOKwVTWtoXjsAp2KfuPBXgLwT0LKY=-w400-h400-n-rj-c0xffffffff",
-      "class name": "Cricket",
-      "instructor": "Jane Smith",
-      "instructor email": "janesmith@example.com",
-      "available seats": 12,
-      "price": 40,
-      "status": "active"
-    },
-    {
-      "image": "https://pbs.twimg.com/profile_images/1428368725363757062/z82a4a3p_400x400.jpg",
-      "class name": "Tennis",
-      "instructor": "Michael Johnson",
-      "instructor email": "michaeljohnson@example.com",
-      "available seats": 8,
-      "price": 60,
-      "status": "active"
-    },
-    {
-      "image": "https://s3.amazonaws.com/recliquecore-imagestack/foothills/uploads/2021/08/31/L6Qc26M2STOFdTopdVi7_we9R5spVZP1NOJt.jpg",
-      "class name": "Swimming",
-      "instructor": "Sarah Adams",
-      "instructor email": "sarahadams@example.com",
-      "available seats": 20,
-      "price": 30,
-      "status": "active"
-    },
-    {
-      "image": "image5.jpg",
-      "class name": "Yoga",
-      "instructor": "David Wilson",
-      "instructor email": "davidwilson@example.com",
-      "available seats": 10,
-      "price": 45,
-      "status": "active"
-    },
-    {
-      "image": "image6.jpg",
-      "class name": "Boxing",
-      "instructor": "Emily Brown",
-      "instructor email": "emilybrown@example.com",
-      "available seats": 15,
-      "price": 55,
-      "status": "active"
-    },
-    {
-      "image": "image7.jpg",
-      "class name": "Gymnastics",
-      "instructor": "James Johnson",
-      "instructor email": "jamesjohnson@example.com",
-      "available seats": 12,
-      "price": 50,
-      "status": "active"
-    },
-    {
-      "image": "image8.jpg",
-      "class name": "Martial Arts",
-      "instructor": "Sophia Lee",
-      "instructor email": "sophialee@example.com",
-      "available seats": 10,
-      "price": 70,
-      "status": "active"
-    },
-    {
-      "image": "image9.jpg",
-      "class name": "Pilates",
-      "instructor": "Matthew Davis",
-      "instructor email": "matthewdavis@example.com",
-      "available seats": 8,
-      "price": 40,
-      "status": "active"
-    },
-    {
-      "image": "image10.jpg",
-      "class name": "Zumba",
-      "instructor": "Olivia Martin",
-      "instructor email": "oliviamartin@example.com",
-      "available seats": 15,
-      "price": 35,
-      "status": "active"
-    }
-  ]
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/005/129/950/small_2x/football-player-figure-line-art-human-action-on-motion-lines-controlling-the-ball-with-chest-free-vector.jpg",
+    "class": "Football",
+    "instructor": "Leo Messi",
+    "email": "messi@gmail.com",
+    "available": 15,
+    "price": 50,
+    "status": "active",
+    "insImage": "https://naijapopstar.net/wp-content/uploads/2023/02/D167A048-F0A8-4152-87E3-4F882391CE3E-400x400.jpeg"
+  },
+  {
+    "image": "https://yt3.ggpht.com/proxy/kqJ01MRdcWWmDZiRoBJ5Ej2WfCoH_rRRMqQgd6bgW1Dg1sTmmh0A1oEHEyPJN3lzgxXkm3x_GFVjAIpOBjaut45Hex5eqGozrnd0Vl7G9K3VZvGtrK98s4WEyybN5f_FY9M_0HgrJX3isyvUNkpCnE80nCYfY3A_E5uvJPD2MUH7gac-2b-anmVIBHmOKwVTWtoXjsAp2KfuPBXgLwT0LKY=-w400-h400-n-rj-c0xffffffff",
+    "class": "Cricket",
+    "instructor": "Shakib Al Hasan",
+    "email": "shakib@gmail.com",
+    "available": 12,
+    "price": 40,
+    "status": "active",
+    "insImage": "https://pbs.twimg.com/profile_images/1322223976316198912/4A6w9j0X_400x400.jpg"
+  },
+  {
+    "image": "https://pbs.twimg.com/profile_images/1428368725363757062/z82a4a3p_400x400.jpg",
+    "class": "Tennis",
+    "instructor": "Roger Federer",
+    "email": "rogerfederer@example.com",
+    "available": 8,
+    "price": 60,
+    "status": "active",
+    "insImage": "https://cms.groupeditors.com/img/fr_201711121944.jpeg  "
+  },
+  {
+    "image": "https://s3.amazonaws.com/recliquecore-imagestack/foothills/uploads/2021/08/31/L6Qc26M2STOFdTopdVi7_we9R5spVZP1NOJt.jpg",
+    "class": "Swimming",
+    "instructor": "Michael Phelps",
+    "email": "michaelphelps@example.com",
+    "available": 20,
+    "price": 30,
+    "status": "active",
+    "insImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Michael_Phelps_Rio_Olympics_2016.jpg/640px-Michael_Phelps_Rio_Olympics_2016.jpg"
+  },
+  {
+    "image": "https://i.ebayimg.com/images/g/3ocAAOSwSAtfot5f/s-l400.jpg",
+    "class": "Yoga",
+    "instructor": "B.K.S. Iyengar",
+    "email": "bksiyengar@example.com",
+    "available": 10,
+    "price": 45,
+    "status": "active",
+    "insImage": "https://yogaschoolthailand.com/images/teacher/yoga/eddy-advanced-thai-teacher-in-bangkok-thailand.jpg"
+  },
+  {
+    "image": "https://static.toiimg.com/thumb/imgsize-10629,msid-16061598,width-400,resizemode-4/16061598.jpg",
+    "class": "Boxing",
+    "instructor": "John Cena",
+    "email": "cena@gmail.com",
+    "available": 15,
+    "price": 55,
+    "status": "active",
+    "insImage": "https://i.pinimg.com/400x/db/c7/19/dbc719344d6a2a586fb64802628e1a74.jpg"
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/012/670/752/small_2x/karate-is-a-martial-art-originating-from-japan-illustrator-free-vector.jpg",
+    "class": "Martial Arts",
+    "instructor": "Bruce Lee",
+    "email": "brucelee@example.com",
+    "available": 10,
+    "price": 70,
+    "status": "active",
+    "insImage": "https://cdn.shopify.com/s/files/1/1229/2604/articles/mma-free-shipping-m1-mma-gloves-5_400x_d0a46df3-3f96-488f-a2c7-ee2c7430135d.gif?v=1617832399"
+  },
+  {
+    "image": "https://i.ebayimg.com/images/g/ArIAAOSwQgpgwFrR/s-l400.png",
+    "class": "Chess",
+    "instructor": "Magnus Carlsen",
+    "email": "magnuscarlsen@example.com",
+    "available": 12,
+    "price": 30,
+    "status": "active",
+    "insImage": "https://i.pinimg.com/originals/f2/38/c8/f238c8bf1c4c9b38ab219dfee28d5d84.jpg"
+  },
+  {
+    "image": "https://pbs.twimg.com/media/EXzAiWCVAAABOxA.jpg",
+    "class": "Carrom",
+    "instructor": "Geeta Zaildar",
+    "email": "geetazaildar@example.com",
+    "available": 10,
+    "price": 25,
+    "status": "active",
+    "insImage": "https://pbs.twimg.com/profile_images/1147824743455842307/ciNpgEyk_400x400.jpg"
+  },
+  {
+    "image": "https://buy-badminton.be/wp-content/uploads/2017/09/P.V.Sindhu-Badminton-400x400.jpg",
+    "class": "Badminton",
+    "instructor": "P.V. Sindhu",
+    "email": "pvsindhu@example.com",
+    "available": 10,
+    "price": 35,
+    "status": "active",
+    "insImage": "https://ik.imagekit.io/j83rchiauw/A_List_Star/pvsindhu-biography-tring.jpg"
+  }
+]

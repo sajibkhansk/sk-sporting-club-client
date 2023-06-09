@@ -1,22 +1,36 @@
 import { FaGoogle, FaGithub, FaEye } from 'react-icons/fa';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useContext } from 'react';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content'
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const SignUp = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
-  const [password, setPassword] = useState('');
-
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const {createUser, updateProfileData, logOut} =  useContext(AuthContext);
+  const MySwal = withReactContent(Swal);
 
   const handleRegister = data => {
-    if (password !== confirmPassword) {
-      console.log("Passwords do not match");
-      return; // Prevent form submission
-    }
-
-    console.log(data);
+      createUser(data.email, data.password)
+      .then(result => {
+          console.log(result.user);
+          updateProfileData(data.name, data.photoUrl)
+          logOut()
+          MySwal.fire({
+              title: <strong>User Created!</strong>,
+              html: <i>Now you can Login!</i>,
+              icon: 'success'
+            })
+            reset();
+  
+      })
+      .catch(error=>{
+          console.log(error);
+      })
+    
   }
+  
 
 
   return (
@@ -27,7 +41,7 @@ const SignUp = () => {
             <img src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7875.jpg?w=826&t=st=1686312395~exp=1686312995~hmac=bc68dc9213ce2e34bc652da7cb93f207fb4324ed4adee2a1b9d208c5404bc619" alt="" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+            <form onSubmit={handleSubmit(handleRegister)} className="card-body">
               <div className="form-control">
                 <h1 className='text-3xl mb-5'>Create Account!!!</h1>
                 <label className="label">

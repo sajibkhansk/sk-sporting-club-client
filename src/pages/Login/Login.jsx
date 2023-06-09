@@ -4,16 +4,18 @@ import { useForm } from "react-hook-form";
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
-
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content'
 
 const Login = () => {
-  const { googleProvider, signWithGoogle } =useContext(AuthContext);
+  const {signIn, googleProvider, signWithGoogle } =useContext(AuthContext);
   const location = useLocation();
+  const MySwal = withReactContent(Swal);
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || '/';
   const [showPassword, setShowPassword] =useState(false);
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  
+
   const handleLogin = data => {
     signIn(data.email, data.password)
         .then(result => {
@@ -21,7 +23,12 @@ const Login = () => {
             navigate(from, {replace : true})
         })
         .catch(error=>{
-            console.log(error);
+          MySwal.fire({
+            icon: 'error',
+            title: 'Incorrect Password',
+            html: <i>Try with correct password!</i>,
+          })
+          reset();
         })
   }
   const handleLoginWithGoogle = () =>{
@@ -79,7 +86,7 @@ const Login = () => {
                     <FaGoogle></FaGoogle>
                 </button>
             </div>
-            <p className='text-center my-3'> Dont Have account?  <Link to="/login" className='underline text-blue-500'>Sign Up</Link></p>
+            <p className='text-center my-3'> Dont Have account?  <Link to="/signup" className='underline text-blue-500'>Sign Up</Link></p>
         </div>
           </div>
         </div>
