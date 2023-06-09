@@ -1,0 +1,92 @@
+[
+    {
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/005/129/950/small_2x/football-player-figure-line-art-human-action-on-motion-lines-controlling-the-ball-with-chest-free-vector.jpg",
+      "class name": "Football",
+      "instructor": "John Doe",
+      "instructor email": "johndoe@example.com",
+      "available seats": 15,
+      "price": 50,
+      "status": "active"
+    },
+    {
+      "image": "https://yt3.ggpht.com/proxy/kqJ01MRdcWWmDZiRoBJ5Ej2WfCoH_rRRMqQgd6bgW1Dg1sTmmh0A1oEHEyPJN3lzgxXkm3x_GFVjAIpOBjaut45Hex5eqGozrnd0Vl7G9K3VZvGtrK98s4WEyybN5f_FY9M_0HgrJX3isyvUNkpCnE80nCYfY3A_E5uvJPD2MUH7gac-2b-anmVIBHmOKwVTWtoXjsAp2KfuPBXgLwT0LKY=-w400-h400-n-rj-c0xffffffff",
+      "class name": "Cricket",
+      "instructor": "Jane Smith",
+      "instructor email": "janesmith@example.com",
+      "available seats": 12,
+      "price": 40,
+      "status": "active"
+    },
+    {
+      "image": "https://pbs.twimg.com/profile_images/1428368725363757062/z82a4a3p_400x400.jpg",
+      "class name": "Tennis",
+      "instructor": "Michael Johnson",
+      "instructor email": "michaeljohnson@example.com",
+      "available seats": 8,
+      "price": 60,
+      "status": "active"
+    },
+    {
+      "image": "https://s3.amazonaws.com/recliquecore-imagestack/foothills/uploads/2021/08/31/L6Qc26M2STOFdTopdVi7_we9R5spVZP1NOJt.jpg",
+      "class name": "Swimming",
+      "instructor": "Sarah Adams",
+      "instructor email": "sarahadams@example.com",
+      "available seats": 20,
+      "price": 30,
+      "status": "active"
+    },
+    {
+      "image": "image5.jpg",
+      "class name": "Yoga",
+      "instructor": "David Wilson",
+      "instructor email": "davidwilson@example.com",
+      "available seats": 10,
+      "price": 45,
+      "status": "active"
+    },
+    {
+      "image": "image6.jpg",
+      "class name": "Boxing",
+      "instructor": "Emily Brown",
+      "instructor email": "emilybrown@example.com",
+      "available seats": 15,
+      "price": 55,
+      "status": "active"
+    },
+    {
+      "image": "image7.jpg",
+      "class name": "Gymnastics",
+      "instructor": "James Johnson",
+      "instructor email": "jamesjohnson@example.com",
+      "available seats": 12,
+      "price": 50,
+      "status": "active"
+    },
+    {
+      "image": "image8.jpg",
+      "class name": "Martial Arts",
+      "instructor": "Sophia Lee",
+      "instructor email": "sophialee@example.com",
+      "available seats": 10,
+      "price": 70,
+      "status": "active"
+    },
+    {
+      "image": "image9.jpg",
+      "class name": "Pilates",
+      "instructor": "Matthew Davis",
+      "instructor email": "matthewdavis@example.com",
+      "available seats": 8,
+      "price": 40,
+      "status": "active"
+    },
+    {
+      "image": "image10.jpg",
+      "class name": "Zumba",
+      "instructor": "Olivia Martin",
+      "instructor email": "oliviamartin@example.com",
+      "available seats": 15,
+      "price": 35,
+      "status": "active"
+    }
+  ]
