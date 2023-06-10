@@ -23,9 +23,7 @@ const Instructor = () => {
                     <div className="card-body col-span-1">
                       <h2 className="card-title">{item.instructor}</h2>
                       <p>Email: <span className="font-bold text-blue-500">{item.email}</span></p>
-                      <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Select</button>
-                      </div>
+                      
                     </div>
                   </div> 
                    )

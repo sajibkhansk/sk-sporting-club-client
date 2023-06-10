@@ -1,9 +1,71 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import useClasses from '../../hooks/useClasses';
+import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from "sweetalert2"
+import { useLocation, useNavigate } from 'react-router-dom';
+import useCart from '../../hooks/useCart';
 
 const Classes = () => {
     const [classes] = useClasses();
+    const {user} = useContext(AuthContext);
+    const [, refetch] = useCart();
+    const navigate = useNavigate();
+    const location = useLocation();
     const activeClasses = classes.filter(item => item.status === 'active');
+
+    const handleAddToCart = item => {
+      if (user && user.email) {
+        const classItem = {
+          itemId: item._id,
+          image: item.image,
+          available: item.available,
+          class: item.class,
+          status: item.status,
+          userEmail: user.email,
+          instructor: item.instructor,
+          price: item.price
+        };
+    
+        fetch('http://localhost:5000/carts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(classItem)
+        })
+          .then(res => res.json())
+          .then(data => {
+            if (data.insertedId) {
+              refetch();
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Classes added to the cart.',
+                showConfirmButton: false,
+                timer: 1500
+              });
+            }
+          })
+          .catch(error => {
+            // Handle any potential errors
+            console.error(error);
+          });
+      } else {
+        Swal.fire({
+          title: 'Please log in to order the class',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Login now!'
+        }).then(result => {
+          if (result.isConfirmed) {
+            navigate('/login', { state: { from: location } });
+          }
+        });
+      }
+    };
+    
     return (
         <>
             <div className="hero min-h-[300px]" style={{ backgroundImage: "url(https://img.freepik.com/free-photo/book-library-with-open-textbook_1150-5924.jpg?w=996&t=st=1686340832~exp=1686341432~hmac=a2f93f51978bf4e34ceaf8b3e77d24a4bbf3b8ba4a1433a849b1f76445d04708)" }}>
@@ -27,7 +89,7 @@ const Classes = () => {
                       <p>Available Sits: <span className="font-bold text-green-600">{item.available}</span></p>
                       <p>Price: <span className="font-bold text-blue-500">${item.price}</span></p>
                       <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Select</button>
+                        <button onClick={()=> handleAddToCart(item)} className="btn btn-primary">Select</button>
                       </div>
                     </div>
                   </div> )

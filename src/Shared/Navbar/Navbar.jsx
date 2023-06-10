@@ -1,22 +1,36 @@
-
+import { FaShoppingBag} from 'react-icons/fa';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
+import useCart from '../../hooks/useCart';
+
 
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [cart] = useCart();
+    console.log(cart);
     const handleLogOut = () => {
         logOut()
-          .then()
-          .catch(error => console.log(error));
-      }
-      const ourNavOption = <>
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/instructor">Instructor</Link></li>
-    <li><Link to="/classes">Classes</Link></li>
-    <li><Link to="/secret">Dashboard</Link></li>
-</>
+            .then()
+            .catch(error => console.log(error));
+    }
+    const ourNavOption = <>
+        
+  <li><Link to="/">Home</Link></li>
+  <li><Link to="/instructor">Instructor</Link></li>
+  <li><Link to="/classes">Classes</Link></li>
+  <li><Link to="/secret">Dashboard</Link></li>
+  { user && <li>
+    <Link>
+      <button className="btn btn-sm">
+        <FaShoppingBag/>
+        <div className="badge badge-secondary">+{cart.length || 0}</div>
+      </button>
+    </Link>
+  </li>}
+
+    </>
     return (
         <>
             <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-black text-white">
@@ -38,23 +52,25 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        {ourNavOption}
+                    <div className='flex items-center'>
+                    {ourNavOption}
+                        </div>
                     </ul>
                 </div>
                 <div className="navbar-end">
                     {/* <Link to="/login" className="btn">Login</Link> */}
-                   
-                    {user ?  <button  onClick={handleLogOut} className='btn'>Logout</button> : <Link to="/login" className="btn">Login</Link>}
+
+                    {user ? <button onClick={handleLogOut} className='btn'>Logout</button> : <Link to="/login" className="btn">Login</Link>}
 
                 </div>
                 <div className="dropdown dropdown-end">
-      {user && <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img src={user.photoURL} />
-        </div>
-      </label>}
-      
-    </div>
+                    {user && <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img src={user.photoURL} />
+                        </div>
+                    </label>}
+
+                </div>
             </div>
         </>
     );
