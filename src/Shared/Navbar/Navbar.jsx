@@ -20,9 +20,8 @@ const NavBar = () => {
   <li><Link to="/">Home</Link></li>
   <li><Link to="/instructor">Instructor</Link></li>
   <li><Link to="/classes">Classes</Link></li>
-  <li><Link to="/secret">Dashboard</Link></li>
   { user && <li>
-    <Link>
+    <Link to='/dashboard/myselectedclass'>
       <button className="btn btn-sm">
         <FaShoppingBag/>
         <div className="badge badge-secondary">+{cart.length || 0}</div>
