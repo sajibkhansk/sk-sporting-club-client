@@ -82,7 +82,7 @@ const Login = () => {
             <div>
             <div className="divider">Login With Google</div>
             <div className="w-full text-center my-4">
-                <button onClick={handleLoginWithGoogle} className="btn btn-circle btn-outline">
+                <button onClick={handleLoginWithGoogle} className="btn btn-circle text-white btn-primary ">
                     <FaGoogle></FaGoogle>
                 </button>
             </div>

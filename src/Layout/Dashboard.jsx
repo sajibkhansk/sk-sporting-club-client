@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaHome, FaUser} from 'react-icons/fa';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
@@ -19,10 +19,10 @@ const Dashboard = () => {
         <h1 className='text-3xl text-red-500'><FaUser></FaUser> User DashBoard</h1>
       </li>
       <div className="divider"></div>
-      <li><Link>My Selected Classes</Link></li>
-      <li><Link>My Enrolled Classes</Link></li>
+      <li><NavLink to='/dashboard/myselectedclass'>My Selected Classes</NavLink></li>
+      <li><NavLink to='/dashboard/myendrolledclass'>My Enrolled Classes</NavLink></li>
       <div className="divider">OR</div>
-      <li><Link to='/'><FaHome></FaHome>Back to Home</Link></li>
+      <li><NavLink to='/'><FaHome></FaHome>Back to Home</NavLink></li>
     </ul>
   
   </div>

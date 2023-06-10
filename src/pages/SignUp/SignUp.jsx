@@ -12,24 +12,37 @@ const SignUp = () => {
   const MySwal = withReactContent(Swal);
 
   const handleRegister = data => {
-      createUser(data.email, data.password)
+    createUser(data.email, data.password)
       .then(result => {
-          console.log(result.user);
-          updateProfileData(data.name, data.photoUrl)
-          logOut()
+        console.log(result.user);
+        return updateProfileData(data.name, data.photoUrl);
+      })
+      .then(() => {
+        const savedUser = { name: data.name, email: data.email };
+        return fetch('http://localhost:5000/users', {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify(savedUser)
+        });
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.insertedId) {
+          logOut();
           MySwal.fire({
-              title: <strong>User Created!</strong>,
-              html: <i>Now you can Login!</i>,
-              icon: 'success'
-            })
-            reset();
-  
+            title: '<strong>User Created!</strong>',
+            html: '<i>Now you can Login!</i>',
+            icon: 'success'
+          });
+          reset();
+        }
       })
-      .catch(error=>{
-          console.log(error);
-      })
-    
-  }
+      .catch(error => {
+        console.log(error);
+      });
+  };
   
 
 

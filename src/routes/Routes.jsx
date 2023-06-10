@@ -9,6 +9,7 @@ import Classes from "../pages/Classes/Classes";
 import Instructor from "../pages/Instructor/Instructor";
 import Dashboard from "../Layout/Dashboard";
 import MySelectedClass from "../pages/Dashboard/MySelectedClass/MySelectedClass";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -40,7 +41,7 @@ export const router = createBrowserRouter([
   },
   {
     path:'dashboard',
-    element:<Dashboard></Dashboard>,
+    element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
       {
         path:'myselectedclass',
