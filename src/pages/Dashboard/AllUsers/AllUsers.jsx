@@ -2,13 +2,14 @@ import React from 'react';
 import { FaTrash, FaUser, FaWallet } from 'react-icons/fa';
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
+import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
 const AllUsers = () => {
-  const { data: users = [], refetch } = useQuery(['users'], async () => {
-    const res = await fetch('http://localhost:5000/users');
-    return res.json();
-  });
-
+  const [axiosSecure] = useAxiosSecure();
+    const { data: users = [], refetch } = useQuery(['users'], async () => {
+        const res = await axiosSecure.get('/users')
+        return res.data;
+    })
   const handleMakeAdmin = (row) => {
     fetch(`http://localhost:5000/users/admin/${row._id}`, {
       method: 'PATCH',

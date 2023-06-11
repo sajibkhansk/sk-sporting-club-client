@@ -1,10 +1,14 @@
 import React from 'react';
 import { FaHome, FaUser} from 'react-icons/fa';
 import { Link, NavLink, Outlet } from 'react-router-dom';
+import useAdmin from '../hooks/useAdmin';
 
 const Dashboard = () => {
   //TODO: Load data from server based on admin
-  const isAdmin = true;
+  const [isAdmin] = useAdmin();
+  console.log(isAdmin);
+
+  
     return (
         <div className="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
