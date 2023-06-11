@@ -9,7 +9,6 @@ import useCart from '../../hooks/useCart';
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
     const [cart] = useCart();
-    console.log(cart);
     const handleLogOut = () => {
         logOut()
             .then()
@@ -21,7 +20,7 @@ const NavBar = () => {
   <li><Link to="/instructor">Instructor</Link></li>
   <li><Link to="/classes">Classes</Link></li>
   { user && <li>
-    <Link to='/dashboard/myselectedclass'>
+    <Link to='/dashboard'>
       <button className="btn btn-sm">
         <FaShoppingBag/>
         <div className="badge badge-secondary">+{cart.length || 0}</div>
