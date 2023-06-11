@@ -31,17 +31,25 @@ const Login = () => {
           reset();
         })
   }
-  const handleLoginWithGoogle = () =>{
+  const handleLoginWithGoogle = () => {
     signWithGoogle(googleProvider)
-    .then(result => {
-        console.log(result.user);
-        navigate(from, {replace : true})
-    })
-    .catch(error=>{
-        console.log(error);
-    })
-}
-
+      .then(result => {
+        const loggedInUser = result.user;
+        console.log(loggedInUser);
+        const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email };
+        fetch('http://localhost:5000/users', {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(saveUser)
+        })
+          .then(res => res.json())
+          .then(() => {
+            navigate(from, { replace: true });
+          });
+      });
+  };
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -82,7 +90,7 @@ const Login = () => {
             <div>
             <div className="divider">Login With Google</div>
             <div className="w-full text-center my-4">
-                <button onClick={handleLoginWithGoogle} className="btn btn-circle text-white btn-primary ">
+                <button onClick={handleLoginWithGoogle} className="btn btn-circle btn-outline">
                     <FaGoogle></FaGoogle>
                 </button>
             </div>

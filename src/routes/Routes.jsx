@@ -10,6 +10,7 @@ import Instructor from "../pages/Instructor/Instructor";
 import Dashboard from "../Layout/Dashboard";
 import MySelectedClass from "../pages/Dashboard/MySelectedClass/MySelectedClass";
 import PrivateRoute from "./PrivateRoute";
+import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 
 
 export const router = createBrowserRouter([
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
       {
         path:'myselectedclass',
         element:<MySelectedClass></MySelectedClass>
+      },
+      {
+        path:'allusers',
+        element:<AllUsers></AllUsers>
       }
     ]
   }
