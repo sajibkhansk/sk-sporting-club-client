@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 
 
 const NavBar = () => {
+
     const [theme, setTheme] = useState(
         localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
       );
@@ -44,8 +45,7 @@ const NavBar = () => {
   { user && <li>
     <Link to='/dashboard'>
       <button className="btn btn-sm">
-        <FaShoppingBag/>
-        <div className="badge badge-secondary">+{cart.length || 0}</div>
+        <div className="badge badge-secondary">DashBoard +{cart.length || 0}</div>
       </button>
     </Link>
   </li>}

@@ -17,7 +17,6 @@ const AllUsers = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {
-          console.log('I am here');
           refetch();
         }
       });
@@ -31,7 +30,6 @@ const AllUsers = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {
-          console.log('I am here');
           refetch();
         }
       });

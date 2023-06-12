@@ -76,7 +76,7 @@ const AddClass = () => {
                         <span className="label-text font-semibold">Instructor Image*</span>
                     </label>
                     <input type="text" placeholder="Instructor Image"
-                        {...register("insImage", {  maxLength: 120 })}
+                        {...register("insImage", {  maxLength: 12000 })}
                         className="input input-bordered w-full " />
                 </div>
                 <div className="form-control w-full mb-4">
@@ -92,10 +92,10 @@ const AddClass = () => {
                         <span className="label-text font-semibold">Class Image*</span>
                     </label>
                     <input type="text" placeholder="Class Image"
-                        {...register("image", {  maxLength: 120 })}
+                        {...register("image", {  maxLength: 1200})}
                         className="input input-bordered w-full " />
                 </div>
-                <div className="form-control h-[2px] mb-[-80px] invisible">
+                <div className="form-control invisible">
                     <label className="label">
                         <span className="label-text font-semibold">Status*</span>
                     </label>

@@ -29,7 +29,7 @@ const Dashboard = () => {
         <h1 className='text-2xl text-red-500'><FaUser></FaUser> Admin DashBoard</h1>
       </li>
       <div className="divider"></div>
-      <li><NavLink to='/dashboard'>Manage Class</NavLink></li>
+      <li><NavLink to='/dashboard/manageclass'>Manage Class</NavLink></li>
       <li><NavLink to='/dashboard/allusers'>Manage User</NavLink></li>
         </>
       }
