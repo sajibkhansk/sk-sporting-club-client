@@ -39,12 +39,12 @@ const Dashboard = () => {
         <h1 className='text-2xl text-red-500'><FaUser></FaUser> Instructor DashBoard</h1>
       </li>
       <div className="divider"></div>
-      <li><NavLink to='/dashboard'>Add a Class</NavLink></li>
-      <li><NavLink to='/dashboard/'>MyClass</NavLink></li>
+      <li><NavLink to='/dashboard/addclass'>Add a Class</NavLink></li>
+      <li><NavLink to='/dashboard/insturctorclass'>MyClass</NavLink></li>
         </>
       }
       
-      {!isInstructor || !isAdmin &&
+      {!isInstructor && !isAdmin &&
       <>
       <li>
       <h1 className='text-3xl text-red-500'><FaUser></FaUser> User DashBoard</h1>

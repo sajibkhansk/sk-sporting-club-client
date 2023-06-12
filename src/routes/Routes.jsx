@@ -14,6 +14,7 @@ import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import AdminRoute from "./AdminRoute";
 import Error from "../Error/Error";
 import AddClass from "../pages/Dashboard/AddClass/AddClass";
+import InstructorClass from "../pages/Dashboard/InstructorClass/InstructorClass";
 
 
 export const router = createBrowserRouter([
@@ -59,7 +60,11 @@ export const router = createBrowserRouter([
       {
         path:'addclass',
         element:<AddClass></AddClass>
-      }
+      },
+      {
+        path:'insturctorclass',
+        element:<InstructorClass></InstructorClass>
+      },
     ]
   }
 ]);

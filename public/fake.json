@@ -6,6 +6,7 @@
     "email": "messi@gmail.com",
     "available": 15,
     "price": 50,
+    "total": 0,
     "status": "active",
     "insImage": "https://naijapopstar.net/wp-content/uploads/2023/02/D167A048-F0A8-4152-87E3-4F882391CE3E-400x400.jpeg"
   },
@@ -16,6 +17,7 @@
     "email": "shakib@gmail.com",
     "available": 12,
     "price": 40,
+    "total": 0,
     "status": "active",
     "insImage": "https://pbs.twimg.com/profile_images/1322223976316198912/4A6w9j0X_400x400.jpg"
   },
@@ -26,6 +28,7 @@
     "email": "rogerfederer@example.com",
     "available": 8,
     "price": 60,
+    "total": 0,
     "status": "active",
     "insImage": "https://cms.groupeditors.com/img/fr_201711121944.jpeg  "
   },
@@ -36,6 +39,7 @@
     "email": "michaelphelps@example.com",
     "available": 20,
     "price": 30,
+    "total": 0,
     "status": "active",
     "insImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Michael_Phelps_Rio_Olympics_2016.jpg/640px-Michael_Phelps_Rio_Olympics_2016.jpg"
   },
@@ -46,6 +50,7 @@
     "email": "bksiyengar@example.com",
     "available": 10,
     "price": 45,
+    "total": 0,
     "status": "active",
     "insImage": "https://yogaschoolthailand.com/images/teacher/yoga/eddy-advanced-thai-teacher-in-bangkok-thailand.jpg"
   },
@@ -56,6 +61,7 @@
     "email": "cena@gmail.com",
     "available": 15,
     "price": 55,
+    "total": 0,
     "status": "active",
     "insImage": "https://i.pinimg.com/400x/db/c7/19/dbc719344d6a2a586fb64802628e1a74.jpg"
   },
@@ -66,6 +72,7 @@
     "email": "brucelee@example.com",
     "available": 10,
     "price": 70,
+    "total": 0,
     "status": "active",
     "insImage": "https://cdn.shopify.com/s/files/1/1229/2604/articles/mma-free-shipping-m1-mma-gloves-5_400x_d0a46df3-3f96-488f-a2c7-ee2c7430135d.gif?v=1617832399"
   },
@@ -76,6 +83,7 @@
     "email": "magnuscarlsen@example.com",
     "available": 12,
     "price": 30,
+    "total": 0,
     "status": "active",
     "insImage": "https://i.pinimg.com/originals/f2/38/c8/f238c8bf1c4c9b38ab219dfee28d5d84.jpg"
   },
@@ -86,6 +94,7 @@
     "email": "geetazaildar@example.com",
     "available": 10,
     "price": 25,
+    "total": 0,
     "status": "active",
     "insImage": "https://pbs.twimg.com/profile_images/1147824743455842307/ciNpgEyk_400x400.jpg"
   },
@@ -96,6 +105,7 @@
     "email": "pvsindhu@example.com",
     "available": 10,
     "price": 35,
+    "total": 0,
     "status": "active",
     "insImage": "https://ik.imagekit.io/j83rchiauw/A_List_Star/pvsindhu-biography-tring.jpg"
   }
