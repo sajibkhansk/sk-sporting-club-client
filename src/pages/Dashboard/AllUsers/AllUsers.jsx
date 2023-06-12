@@ -22,6 +22,20 @@ const AllUsers = () => {
         }
       });
   };
+  
+  const handleMakeInstructor = (row) => {
+    console.log(row.email);
+    fetch(`http://localhost:5000/users/instructor/${row._id}`, {
+      method: 'PATCH',
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount) {
+          console.log('I am here');
+          refetch();
+        }
+      });
+  };
 
   return (
     <div className='w-full'>
@@ -49,7 +63,8 @@ const AllUsers = () => {
                 <td className='text-2xl text-orange-600'>{row.name}</td>
                 <td className='text-2xl text-blue-600'>{row.email}</td>
                 <th>
-                  <button className='btn btn-success'>Make Instructor</button>
+                <button onClick={() => handleMakeInstructor(row)} className='btn btn-primary' disabled={row.role == 'instructor'}> MAKE INSTRUCTOR
+                  </button>
                 </th>
                 <th>
                   <button onClick={() => handleMakeAdmin(row)} className='btn btn-primary' disabled={row.role == 'admin'}> MAKE ADMIN
