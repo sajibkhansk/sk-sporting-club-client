@@ -15,6 +15,7 @@ const Dashboard = () => {
         <div className="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content flex flex-col items-center justify-center">
+    <h1 className='text-primary font-bold text-5xl'>Welcome to Dasboard</h1>
     <Outlet></Outlet>
     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
   

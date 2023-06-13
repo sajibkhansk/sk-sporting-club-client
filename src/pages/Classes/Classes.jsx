@@ -4,8 +4,12 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import Swal from "sweetalert2"
 import { useLocation, useNavigate } from 'react-router-dom';
 import useCart from '../../hooks/useCart';
+import useAdmin from '../../hooks/useAdmin';
+import useInstructor from '../../hooks/useInstructor';
 
 const Classes = () => {
+  const [isAdmin] = useAdmin();
+  const [isInstructor] = useInstructor();
     const [classes] = useClasses();
     const {user} = useContext(AuthContext);
     const [, refetch] = useCart();
@@ -81,15 +85,19 @@ const Classes = () => {
                 {
                     activeClasses.map(item => <div className="card card-side bg-base-100 shadow-xl grid grid-cols-2">
                     <figure className="col-span-1">
-                      <img src={item.image} alt="Movie" className="w-full" />
+                      <img src={item.image} alt="Picture" className="w-full" />
                     </figure>
                     <div className="card-body col-span-1">
                       <h2 className="card-title">{item.class}</h2>
                       <p>Instructor: <span className="font-bold">{item.instructor}</span></p>
-                      <p>Available Sits: <span className="font-bold text-green-600">{item.available}</span></p>
+                      { 
+                        <p>Available Sits: <span className="font-bold text-green-600">{item.available}</span></p>
+                      }
                       <p>Price: <span className="font-bold text-blue-500">${item.price}</span></p>
                       <div className="card-actions justify-end">
-                        <button onClick={()=> handleAddToCart(item)} className="btn btn-primary">Select</button>
+                      
+                        {parseInt(item.available)==0 || isAdmin || isInstructor ? <button disabled className="btn btn-primary">Select</button>:
+                        <button onClick={()=> handleAddToCart(item)} className="btn btn-primary">Select</button>}
                       </div>
                     </div>
                   </div> )
