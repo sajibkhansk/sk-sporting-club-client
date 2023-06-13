@@ -1,6 +1,6 @@
 # SK Sporting Club
 
-![SK Sporting Club Logo](https://i.ibb.co/fXLYjZ9/icon.jpg)
+<img src="https://i.ibb.co/fXLYjZ9/icon.jpg" alt="SK Sporting Club Logo" width="200">
 
 ## Features
 1. Dynamic Website
