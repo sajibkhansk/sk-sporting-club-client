@@ -85,13 +85,14 @@ const Classes = () => {
                 {
                     activeClasses.map(item => <div className="card card-side bg-base-100 shadow-xl grid grid-cols-2">
                     <figure className="col-span-1">
-                      <img src={item.image} alt="Picture" className="w-full" />
+                      <img src={item.image} alt="Movie" className="w-full" />
                     </figure>
                     <div className="card-body col-span-1">
                       <h2 className="card-title">{item.class}</h2>
                       <p>Instructor: <span className="font-bold">{item.instructor}</span></p>
                       { 
-                        <p>Available Sits: <span className="font-bold text-green-600">{item.available}</span></p>
+                        parseInt(item.available)==0 ? <>
+                        <><p>Available Sits: <span className="badge badge-secondary">{item.available} </span></p></></>:<><p>Available Sits: <span className="font-bold text-green-600">{item.available}</span></p></>
                       }
                       <p>Price: <span className="font-bold text-blue-500">${item.price}</span></p>
                       <div className="card-actions justify-end">

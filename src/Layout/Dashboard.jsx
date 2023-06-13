@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome, FaUser} from 'react-icons/fa';
+import { FaHome, FaUser, FaTasks, FaPlus, FaBook, FaBookOpen, FaUserGraduate} from 'react-icons/fa';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../hooks/useAdmin';
 import useInstructor from '../hooks/useInstructor';
@@ -30,8 +30,8 @@ const Dashboard = () => {
         <h1 className='text-2xl text-red-500'><FaUser></FaUser> Admin DashBoard</h1>
       </li>
       <div className="divider"></div>
-      <li><NavLink to='/dashboard/manageclass'>Manage Class</NavLink></li>
-      <li><NavLink to='/dashboard/allusers'>Manage User</NavLink></li>
+      <li><NavLink to='/dashboard/manageclass'><FaTasks></FaTasks> Manage Class </NavLink></li>
+      <li><NavLink to='/dashboard/allusers'><FaUser></FaUser> Manage User</NavLink></li>
         </>
       }
     {
@@ -40,8 +40,8 @@ const Dashboard = () => {
         <h1 className='text-2xl text-red-500'><FaUser></FaUser> Instructor DashBoard</h1>
       </li>
       <div className="divider"></div>
-      <li><NavLink to='/dashboard/addclass'>Add a Class</NavLink></li>
-      <li><NavLink to='/dashboard/insturctorclass'>MyClass</NavLink></li>
+      <li><NavLink to='/dashboard/addclass'><FaPlus></FaPlus>Add a Class</NavLink></li>
+      <li><NavLink to='/dashboard/insturctorclass'><FaBook></FaBook>MyClass</NavLink></li>
         </>
       }
       
@@ -51,8 +51,8 @@ const Dashboard = () => {
       <h1 className='text-3xl text-red-500'><FaUser></FaUser> User DashBoard</h1>
     </li>
     <div className="divider"></div>
-    <li><NavLink to='/dashboard/myselectedclass'>My Selected Classes</NavLink></li>
-    <li><NavLink to='/dashboard/myendrolledclass'>My Enrolled Classes</NavLink></li>
+    <li><NavLink to='/dashboard/myselectedclass'><FaBookOpen></FaBookOpen> My Selected Classes</NavLink></li>
+    <li><NavLink to='/dashboard/myendrolledclass'><FaUserGraduate></FaUserGraduate> My Enrolled Classes</NavLink></li>
       </>
       }
       

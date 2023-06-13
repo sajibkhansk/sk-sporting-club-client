@@ -3,7 +3,7 @@ import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 import PopularInstructor from '../Classes/PopularInstructor';
 import PopularClass from '../Classes/PopularClass';
-import Goal from '../Classes/Goal';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
