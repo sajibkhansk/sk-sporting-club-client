@@ -15,8 +15,10 @@ const Dashboard = () => {
         <div className="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content flex flex-col items-center justify-center">
-    <h1 className='text-primary font-bold text-5xl'>Welcome to Dasboard</h1>
+    <h1 className='text-primary font-bold text-5xl mb-1'>Welcome to Dashboard </h1>
+    <div className="divider"></div>
     <Outlet></Outlet>
+    
     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
   
   </div> 
@@ -52,7 +54,7 @@ const Dashboard = () => {
     </li>
     <div className="divider"></div>
     <li><NavLink to='/dashboard/myselectedclass'><FaBookOpen></FaBookOpen> My Selected Classes</NavLink></li>
-    <li><NavLink to='/dashboard/myendrolledclass'><FaUserGraduate></FaUserGraduate> My Enrolled Classes</NavLink></li>
+    <li><NavLink to='/dashboard/payment'><FaUserGraduate></FaUserGraduate> My Enrolled Classes</NavLink></li>
       </>
       }
       

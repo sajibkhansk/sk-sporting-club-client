@@ -3,6 +3,7 @@ import { FaTrash, FaUser, FaWallet} from
 'react-icons/fa';
 import Swal from "sweetalert2"
 import useCart from '../../../hooks/useCart';
+import { Link } from 'react-router-dom';
 
 const MySelectedClass = () => {
     const [cart, refetch] = useCart();
@@ -84,7 +85,7 @@ const MySelectedClass = () => {
               <button onClick={()=> handleDelete(row)} className="btn btn-circle btn-error btn-outline"><FaTrash></FaTrash></button>
             </th>
             <th>
-            <button className="btn btn-success btn-circle btn-outline"><FaWallet></FaWallet></button>
+            <Link to = "/dashboard/payment"><button className="btn btn-success btn-circle btn-outline"><FaWallet></FaWallet></button></Link>
             </th>
             
           </tr>)

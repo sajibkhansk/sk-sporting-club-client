@@ -17,6 +17,7 @@ import AddClass from "../pages/Dashboard/AddClass/AddClass";
 import InstructorClass from "../pages/Dashboard/InstructorClass/InstructorClass";
 import ManageClass from "../pages/Dashboard/ManageClass/ManageClass";
 import Feedback from "../pages/Dashboard/FeedBack/Feedback";
+import Payment from "../pages/Classes/Payment";
 
 
 export const router = createBrowserRouter([
@@ -74,7 +75,12 @@ export const router = createBrowserRouter([
       {
         path:'Feedback',
         element:<Feedback></Feedback>
-      }
+      },
+      {
+        path:'payment',
+        element:<Payment></Payment>
+      },
+      
     ]
   }
 ]);
